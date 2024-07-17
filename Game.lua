@@ -24,13 +24,11 @@ function Game()
 
       chats = {}
 
-      local chat_x = math.floor(math.random(love.graphics.getWidth()  ))
-      local chat_y = math.floor(math.random(love.graphics.getHeight()))
-
-      table.insert(chats, 1, Chat(chat_x, chat_y, self.level))
-      table.insert(chats, 2, Chat(chat_x, chat_y, self.level))
-      table.insert(chats, 3, Chat(chat_x, chat_y, self.level))
-      table.insert(chats, 4, Chat(chat_x, chat_y, self.level))
+      for i = 1, 1 do
+        local chat_x = math.floor(math.random(love.graphics.getWidth()))
+        local chat_y = math.floor(math.random(love.graphics.getHeight()))
+        table.insert(chats, i, Chat(chat_x, chat_y, self.level))
+      end
 
     end
   }

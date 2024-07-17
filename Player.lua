@@ -39,7 +39,6 @@ function Player(debugging)
       end
     end,
     destroyBan = function (self, index)
-      print(self.ban, index)
       table.remove(self.bans, index)
     end,
 
@@ -50,7 +49,6 @@ function Player(debugging)
       if love.keyboard.isDown('left') then
         self.angle = self.angle - self.rotation_speed * dt
         self.facing = self.angle
-        print(self.facing)
       end
       if love.keyboard.isDown('right') then
         self.angle = self.angle + self.rotation_speed * dt

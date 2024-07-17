@@ -64,7 +64,7 @@ function love.update(dt)
           end
       end
 
-      chat:move(dt)
+      chat:move(player.x, player.y, dt)
   end
 
   elseif game.state.menu then
