@@ -30,7 +30,23 @@ function Game()
         table.insert(chats, i, Chat(chat_x, chat_y, self.level))
       end
 
-    end
+    end,
+
+    draw = function (self, faded)
+      if faded then
+          Text(
+              "PAUSED",
+              0,
+              love.graphics.getHeight() * 0.4,
+              "h1",
+              false,
+              false,
+              love.graphics.getWidth(),
+              "center",
+              1
+          ):draw()
+      end
+    end,
   }
 end
 
